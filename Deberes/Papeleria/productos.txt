@@ -1,0 +1,2 @@
+Borrador;001;23;212
+Cartulina;003;34;897
