@@ -54,6 +54,43 @@ randomico = np.random.rand(3)
 
 series_tres_rand = pd.Series(randomico)
 
+ciudades_unidas = pd.concat([ciudades_uno,ciudades_dos])
+print(ciudades_unidas)
+
+ciudades_tres = pd.Series({"Chone":5500,"Puyo":2000})
+ciudades_añadidas = ciudades_unidas.add(ciudades_tres)
+print(ciudades_añadidas)
+
+#Calculando valores de probabilidad
+ciudades_unidas.max()
+
+ciudades_unidas.std()
+
+ciudades_unidas.median()
+
+#Primeros 2 valores
+ciudades_añadidas.head(2)
+
+#Ultimos 2 valores
+ciudades_añadidas.tail(2)
+
+#Condicionales dentro de una serie
+
+def calculo(valor):
+    if(valor<=1000):
+        return valor * 1.05
+    if(valor>1000 and valor<=3000):
+        return valor * 1.10
+    if(valor > 3000):
+        return valor * 1.15
+
+ciudades_añadidas.map(calculo)
+
+
+
+
+
+
 
 
 
