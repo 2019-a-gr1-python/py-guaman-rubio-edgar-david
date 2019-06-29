@@ -1,7 +1,8 @@
 import scrapy
+import pandas as pd
 
 class IntroSpyder(scrapy.Spider):
-    name: 'introduccion_spyder'
+    name= 'introduccion_spyder'
 
     def start_requests(self):
         urls = ['http://books.toscrape.com/catalogue/category/books_1/page-1.html']
@@ -17,3 +18,10 @@ class IntroSpyder(scrapy.Spider):
         print(titulos)
         print(stocks)
         print(precios)
+        
+        with open('prueba.txt','+a') as file:
+            file.writelines(titulos)
+            file.writelines(stocks)
+            file.writelines(precios)
+
+    
